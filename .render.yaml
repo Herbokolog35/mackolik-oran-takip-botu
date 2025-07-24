@@ -1,0 +1,8 @@
+services:
+  - type: cron
+    name: oran-takip-botu
+    schedule: "@hourly"
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
